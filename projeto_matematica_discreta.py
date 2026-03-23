@@ -15,6 +15,7 @@ def implicacao (p,q):
 def bicondicional (p,q):
     return p == q
 
+<<<<<<< HEAD
 def classificar(resultados):
     if all(resultados):
         return "Tautologia"
@@ -23,6 +24,8 @@ def classificar(resultados):
     else:
         return "Contingência"
 
+=======
+>>>>>>> 250057170e916adbf5d790d98d061a29a93953a6
 def f(v): return "V" if v else "F"
 
 # Parte 2: Tabelas-verdade
@@ -30,6 +33,7 @@ def f(v): return "V" if v else "F"
 #p->q;
 print("-" * 12)
 print("p | q | p -> q")
+<<<<<<< HEAD
 resultados = []
 for p in [True,False]:
     for q in [True,False]:
@@ -37,24 +41,40 @@ for p in [True,False]:
         resultados.append(resultado)
         print(f"{f(p)} | {f(q)} | {f(resultado)}")
 print("Classificação: ", classificar(resultados))
+=======
+for p in [True,False]:
+    for q in [True,False]:
+        resultado = implicacao(p,q)
+        print(f"{f(p)} | {f(q)} | {f(resultado)}")
+>>>>>>> 250057170e916adbf5d790d98d061a29a93953a6
 
 #(p^q)->r;
 print("-" * 28)
 print("p | q | r | p^q | (p^q)->r ")
+<<<<<<< HEAD
 resultados = []
+=======
+>>>>>>> 250057170e916adbf5d790d98d061a29a93953a6
 for p in[True,False]:
     for q in[True,False]:
         for r in [True,False]:
             p_e_q = p and q 
             resultado = implicacao(p_e_q, r)
+<<<<<<< HEAD
             resultados.append(resultado)
             print(f"{f(p)} | {f(q)} | {f(r)} | {f(p_e_q)}   | {f(resultado)}")
 print("Classificação: ", classificar(resultados))
+=======
+            print(f"{f(p)} | {f(q)} | {f(r)} | {f(p_e_q)}   | {f(resultado)}")
+>>>>>>> 250057170e916adbf5d790d98d061a29a93953a6
 
 #(p->q)^(q->r)->(p->r);
 print("-" * 50)
 print("p | q | r | p->q | q->r | p->r | (p->q)^(q->r) | (p->q)^(q->r)->(p->r)")
+<<<<<<< HEAD
 resultados = []
+=======
+>>>>>>> 250057170e916adbf5d790d98d061a29a93953a6
 for p in[True,False]:
     for q in[True,False]:
         for r in[True,False]:
@@ -63,6 +83,7 @@ for p in[True,False]:
             p_r = implicacao(p,q)
             p_implica_q_e_q_implica_r = conjuncao(p_q,q_r)
             resultado = implicacao(p_implica_q_e_q_implica_r,p_r)
+<<<<<<< HEAD
             resultados.append(resultado)
             print(f"{f(p)} | {f(q)} | {f(r)} | {f(p_q)}    | {f(q_r) }    | {f(p_r)}    | {f(p_implica_q_e_q_implica_r)}             | {f(resultado)}")
 print("Classificação: ", classificar(resultados))
@@ -103,3 +124,23 @@ for p in[True,False]:
         resultados.append(resultado)
         print(f"{f(p)} | {f(q)} | {f(resultado)} ")
 print("Classificação: ", classificar(resultados))
+=======
+            print(f"{f(p)} | {f(q)} | {f(r)} | {f(p_q)}    | {f(q_r) }    | {f(p_r)}    | {f(p_implica_q_e_q_implica_r)}             | {f(resultado)}")
+            
+#Parte 3: Classificação de Fórmulas
+
+def classificar(resultados):
+    if all(resultados):
+        return "Tautologia"
+    elif not any(resultados):
+        return "Contradição"
+    else:
+        return "Contingência"
+    
+#p 
+    
+
+    
+
+    
+>>>>>>> 250057170e916adbf5d790d98d061a29a93953a6
