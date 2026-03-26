@@ -78,7 +78,7 @@ for p in[True,False]:
         nao_q = not q 
         resultado = conjuncao(p,nao_q)
         resultados.append(resultado)
-        print(f"{f(p)} | {f(q)} | {f(nao_q)} | {f(resultado)} ")
+        print(f"{f(p)} | {f(q)} |  {f(nao_q)} |  {f(resultado)} ")
 print("Classificação: ", classificar(resultados))
 
 #p^¬q;
@@ -90,7 +90,7 @@ for p in[True,False]:
         nao_q = not q
         resultado = disjuncao(p,nao_q)
         resultados.append(resultado)
-        print(f"{f(p)} | {f(q)} | {f(nao_q)} | {f(resultado)} ")
+        print(f"{f(p)} | {f(q)} |  {f(nao_q)} |  {f(resultado)} ")
 print("Classificação: ", classificar(resultados))
 
 #p->q;
