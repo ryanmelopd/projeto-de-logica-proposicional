@@ -1,7 +1,7 @@
 #Parte 1: Conectivos lógicos
 
 def negacao(p):
-    return not p
+   return not p
 
 def conjuncao (p,q):
     return p and q
@@ -60,7 +60,7 @@ for p in[True,False]:
         for r in[True,False]:
             p_q = implicacao(p,q)
             q_r = implicacao(q,r)
-            p_r = implicacao(p,q)
+            p_r = implicacao(p,r)
             p_implica_q_e_q_implica_r = conjuncao(p_q,q_r)
             resultado = implicacao(p_implica_q_e_q_implica_r,p_r)
             resultados.append(resultado)
